@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site:Site xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:site="http://www.example.org/site"
+    xsi:schemaLocation="http://www.example.org/site site.ecore"
+    nom="Fac Sciences">
+  <departement
+      nom="Informatique"
+      responsable="//@responsable.0">
+    <formation
+        nom="Licence Fonda"
+        description="formation academique visant a apporter des connaissances theoriques et pratiques aux etudiants">
+      <niveau
+          niveau="L1"
+          description="Licence 1"
+          responsable="//@responsable.3">
+        <semestre
+            nom="S1">
+          <ue
+              libelle="INFO 131"
+              code="INFO 131"
+              credits="6"
+              responsable="//@responsable.2"/>
+        </semestre>
+        <semestre
+            nom="S2">
+          <ue
+              libelle="INFO 152"
+              code="INFO 152"
+              credits="3"
+              responsable="//@responsable.5"/>
+        </semestre>
+      </niveau>
+      <niveau
+          niveau="L2"
+          description="Licence 2"
+          responsable="//@responsable.8">
+        <semestre
+            nom="S1">
+          <ue
+              libelle="INFO 211"
+              code="INFO 211"
+              credits="5"
+              responsable="//@responsable.9"/>
+        </semestre>
+        <semestre
+            nom="S2">
+          <ue
+              libelle="INFO 218"
+              code="INFO 218"
+              credits="5"
+              responsable="//@responsable.4"/>
+        </semestre>
+      </niveau>
+      <niveau
+          niveau="L3"
+          description="Licence 3"
+          responsable="//@responsable.4">
+        <specialite
+            nom="SR"
+            description="systeme et reseau"/>
+        <specialite
+            nom="SECU"
+            description="securite"/>
+        <specialite
+            nom="SI GL"
+            description="systeme d'information et genie logiciel"/>
+        <specialite
+            nom="DS"
+            description="Data Sciences"/>
+        <semestre
+            nom="S1">
+          <ue
+              libelle="INFO 3018"
+              code="INFO 3018"
+              credits="6"
+              responsable="//@responsable.5">
+            <programmation
+                jour="lundi"
+                salle="s008"
+                heureDebut="14"
+                heureFin="16"/>
+          </ue>
+        </semestre>
+        <semestre
+            nom="S2">
+          <ue
+              libelle="INFO 3089"
+              code="INFO 3089"
+              required="false"
+              credits="5"
+              responsable="//@responsable.9"
+              specialite="//@departement.0/@formation.0/@niveau.2/@specialite.2">
+            <programmation
+                jour="mercredi"
+                salle="s006"
+                heureDebut="8"
+                heureFin="10"/>
+          </ue>
+        </semestre>
+      </niveau>
+    </formation>
+    <formation
+        nom="Master Fonda">
+      <niveau
+          niveau="M1"
+          responsable="//@responsable.2">
+        <specialite
+            nom="SI GL"
+            description="systeme d'information et genie logiciel"/>
+        <specialite
+            nom="DS"
+            description="Data Sciences"/>
+        <specialite
+            nom="SR"
+            description="systeme et reseau"/>
+        <specialite
+            nom="SECU"
+            description="securite"/>
+        <semestre
+            nom="S1">
+          <ue
+              libelle="INFO 4017"
+              code="INFO 4017"
+              credits="6"
+              description=""
+              responsable="//@responsable.6">
+            <programmation
+                jour="lundi"
+                salle="s008"
+                heureDebut="7"
+                heureFin="10"/>
+          </ue>
+          <ue
+              libelle="INFO 4077"
+              code="INFO 4077"
+              credits="5"
+              responsable="//@responsable.5"
+              specialite="//@departement.0/@formation.1/@niveau.0/@specialite.0">
+            <programmation
+                jour="jeudi"
+                salle="s006"
+                heureDebut="10"
+                heureFin="13"/>
+          </ue>
+        </semestre>
+        <semestre
+            nom="S2">
+          <ue
+              libelle="INFO 4038"
+              code="INFO 4038"
+              credits="6"
+              responsable="//@responsable.7">
+            <programmation
+                jour="mardi"
+                salle="A135"
+                heureDebut="7"
+                heureFin="10"/>
+          </ue>
+          <ue
+              libelle="INFO 4058"
+              code="INFO 4058"
+              credits="5"
+              responsable="//@responsable.4"
+              specialite="//@departement.0/@formation.1/@niveau.0/@specialite.0">
+            <programmation
+                jour="vendredi"
+                salle="s006"
+                heureDebut="13"
+                heureFin="16"/>
+          </ue>
+        </semestre>
+      </niveau>
+      <niveau
+          niveau="M2"
+          description="Master 2"
+          responsable="//@responsable.0">
+        <specialite
+            nom="SI GL"
+            description="systeme d'information et genie logiciel"/>
+        <specialite
+            nom="DS"
+            description="Data Sciences"/>
+        <specialite
+            nom="SR"
+            description="systeme et reseau"/>
+        <specialite
+            nom="SECU"
+            description="securite"/>
+        <semestre
+            nom="S1">
+          <ue
+              libelle="INFO 5019"
+              code="INFO 5019"
+              credits="6"
+              responsable="//@responsable.1">
+            <programmation
+                jour="jeudi"
+                salle="s107"
+                heureDebut="7"
+                heureFin="10"/>
+          </ue>
+          <ue
+              libelle="INFO 5029"
+              code="INFO 5029"
+              credits="6"
+              responsable="//@responsable.2">
+            <programmation
+                jour="jeudi"
+                salle="s107"
+                heureDebut="7"
+                heureFin="13"/>
+          </ue>
+          <ue
+              libelle="INFO 5039"
+              code="INFO 5039"
+              required="false"
+              credits="5"
+              responsable="//@responsable.4"
+              specialite="//@departement.0/@formation.1/@niveau.1/@specialite.0">
+            <programmation
+                jour="jeudi"
+                salle="s107"
+                heureDebut="16"
+                heureFin="19"/>
+          </ue>
+          <ue
+              libelle="INFO 5049"
+              code="INFO 5049"
+              required="false"
+              responsable="//@responsable.8"
+              specialite="//@departement.0/@formation.1/@niveau.1/@specialite.0">
+            <programmation
+                jour="mercredi"
+                salle="s107"
+                heureDebut="7"
+                heureFin="10"/>
+          </ue>
+          <ue
+              libelle="INFO 5059"
+              code="INFO 5059"
+              credits="5"
+              responsable="//@responsable.5"
+              specialite="//@departement.0/@formation.1/@niveau.1/@specialite.0">
+            <programmation
+                jour="mardi"
+                salle="s107"
+                heureDebut="10"
+                heureFin="13"/>
+          </ue>
+        </semestre>
+        <semestre
+            nom="S2"/>
+      </niveau>
+    </formation>
+  </departement>
+  <responsable
+      nom="Aminou "
+      prenom="Halidou"
+      grade="CC"/>
+  <responsable
+      nom="Atsa Etoundi"
+      prenom="Roger"
+      grade="Professeur"/>
+  <responsable
+      nom="Tsopze"
+      prenom="Norbert"
+      grade="MC"/>
+  <responsable
+      nom="Hamza"
+      prenom="Adamou"
+      grade="CC"/>
+  <responsable
+      nom="Monthe"
+      prenom="Valery"
+      grade="CC"/>
+  <responsable
+      nom="Kimbi"
+      prenom="Xaviera"
+      grade="CC"/>
+  <responsable
+      nom="Melatagia"
+      prenom="Paulin"
+      grade="CC"/>
+  <responsable
+      nom="Kouokam"
+      prenom="Etienne"
+      grade="CC"/>
+  <responsable
+      nom="Tapamo"
+      prenom="Hyppolite"/>
+  <responsable
+      nom="Jiomekong"
+      prenom="fidele"
+      grade="CC"/>
+</site:Site>
