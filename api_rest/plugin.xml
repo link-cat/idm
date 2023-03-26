@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated api_rest -->
+      <package
+            uri="http://www.example.org/api_rest"
+            class="api_rest.Api_restPackage"
+            genModel="model/api_rest.genmodel"/>
+   </extension>
+
+</plugin>

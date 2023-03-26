@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated api_rest -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="api_rest.presentation.Api_restModelWizardID"
+            name="%_UI_Api_restModelWizard_label"
+            class="api_rest.presentation.Api_restModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Api_restModelFile.gif">
+         <description>%_UI_Api_restModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated api_rest -->
+      <editor
+            id="api_rest.presentation.Api_restEditorID"
+            name="%_UI_Api_restEditor_label"
+            icon="icons/full/obj16/Api_restModelFile.gif"
+            extensions="api_rest"
+            class="api_rest.presentation.Api_restEditor"
+            contributorClass="api_rest.presentation.Api_restActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

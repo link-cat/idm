@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api_rest:Application
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:api_rest="http://www.example.org/api_rest"
+    xsi:schemaLocation="http://www.example.org/api_rest api_rest.ecore">
+  <route>
+    <middleware
+        nom="middleware1"/>
+    <reponse
+        href="Reponse.xmi#/"/>
+  </route>
+</api_rest:Application>

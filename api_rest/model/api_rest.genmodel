@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/api_rest/src-gen" creationIcons="false" editDirectory="/api_rest.edit/src-gen"
+    editorDirectory="/api_rest.editor/src-gen" modelPluginID="api_rest" modelName="Api_rest"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>api_rest.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Api_rest" disposableProviderFactory="true" ecorePackage="api_rest.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="api_rest.ecore#//HTTP_METHOD">
+      <genEnumLiterals ecoreEnumLiteral="api_rest.ecore#//HTTP_METHOD/GET"/>
+      <genEnumLiterals ecoreEnumLiteral="api_rest.ecore#//HTTP_METHOD/POST"/>
+      <genEnumLiterals ecoreEnumLiteral="api_rest.ecore#//HTTP_METHOD/PUT"/>
+      <genEnumLiterals ecoreEnumLiteral="api_rest.ecore#//HTTP_METHOD/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="api_rest.ecore#//HTTP_METHOD/PATCH"/>
+    </genEnums>
+    <genClasses ecoreClass="api_rest.ecore#//Serveur">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Serveur/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Serveur/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Serveur/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Serveur/port"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference api_rest.ecore#//Serveur/connection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference api_rest.ecore#//Serveur/ressources"/>
+    </genClasses>
+    <genClasses ecoreClass="api_rest.ecore#//Route">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Route/endPoint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Route/methode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Route/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference api_rest.ecore#//Route/fonction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference api_rest.ecore#//Route/middleware"/>
+    </genClasses>
+    <genClasses ecoreClass="api_rest.ecore#//Middleware">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Middleware/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Middleware/description"/>
+    </genClasses>
+    <genClasses ecoreClass="api_rest.ecore#//Response">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Response/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Response/corps"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Response/description"/>
+    </genClasses>
+    <genClasses ecoreClass="api_rest.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Parameter/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Parameter/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Parameter/required"/>
+    </genClasses>
+    <genClasses ecoreClass="api_rest.ecore#//Connection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Connection/host"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Connection/user"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Connection/password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Connection/database"/>
+    </genClasses>
+    <genClasses ecoreClass="api_rest.ecore#//Ressource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Ressource/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Ressource/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference api_rest.ecore#//Ressource/route"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Ressource/prefixUri"/>
+    </genClasses>
+    <genClasses ecoreClass="api_rest.ecore#//Fonction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Fonction/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Fonction/corps"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute api_rest.ecore#//Fonction/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference api_rest.ecore#//Fonction/response"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference api_rest.ecore#//Fonction/parameter"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

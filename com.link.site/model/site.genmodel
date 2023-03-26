@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/com.link.site/src-gen" creationIcons="false" editDirectory="/com.link.site.edit/src-gen"
+    editorDirectory="/com.link.site.editor/src-gen" modelPluginID="com.link.site"
+    modelName="Site" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>site.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Site" basePackage="com.link" disposableProviderFactory="true"
+      ecorePackage="site.ecore#/">
+    <genClasses ecoreClass="site.ecore#//Departement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Departement/nom"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference site.ecore#//Departement/formation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference site.ecore#//Departement/responsable"/>
+    </genClasses>
+    <genClasses ecoreClass="site.ecore#//Formation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Formation/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Formation/description"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference site.ecore#//Formation/niveau"/>
+    </genClasses>
+    <genClasses ecoreClass="site.ecore#//Niveau">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Niveau/niveau"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference site.ecore#//Niveau/specialite"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference site.ecore#//Niveau/semestre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Niveau/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference site.ecore#//Niveau/responsable"/>
+    </genClasses>
+    <genClasses ecoreClass="site.ecore#//Specialite">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Specialite/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Specialite/description"/>
+    </genClasses>
+    <genClasses ecoreClass="site.ecore#//Semestre">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Semestre/nom"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference site.ecore#//Semestre/ue"/>
+    </genClasses>
+    <genClasses ecoreClass="site.ecore#//UE">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//UE/libelle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//UE/code"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference site.ecore#//UE/programmation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//UE/required"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//UE/credits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//UE/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference site.ecore#//UE/responsable"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference site.ecore#//UE/ressource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference site.ecore#//UE/specialite"/>
+    </genClasses>
+    <genClasses ecoreClass="site.ecore#//Responsable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Responsable/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Responsable/prenom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Responsable/grade"/>
+    </genClasses>
+    <genClasses ecoreClass="site.ecore#//Ressource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Ressource/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Ressource/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Ressource/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Ressource/lien"/>
+    </genClasses>
+    <genClasses ecoreClass="site.ecore#//Programmation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Programmation/jour"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Programmation/salle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Programmation/heureDebut"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Programmation/heureFin"/>
+    </genClasses>
+    <genClasses ecoreClass="site.ecore#//Site">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute site.ecore#//Site/nom"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference site.ecore#//Site/departement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference site.ecore#//Site/responsable"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
